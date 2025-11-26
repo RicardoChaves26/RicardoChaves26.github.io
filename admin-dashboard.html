@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel de Administración - Tenorio Lodge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      :root{--brand:#2c7a5f}
+      .bg-brand{background-color:var(--brand)!important}
+      .text-brand{color:var(--brand)!important}
+      .btn-brand{background-color:var(--brand);border-color:var(--brand);color:white}
+      .btn-brand:hover{background-color:#245e48;border-color:#245e48}
+      .sidebar{background-color:#f8f9fa;min-height:100vh;padding:20px}
+      .nav-link{color:#333;padding:10px 15px;margin-bottom:5px;border-radius:5px}
+      .nav-link:hover{background-color:#e9ecef}
+      .nav-link.active{background-color:var(--brand);color:white}
+      .stat-card{border-left:4px solid var(--brand)}
+      .logout-btn{position:absolute;bottom:20px;width:calc(100% - 40px)}
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+          <h4 class="text-brand mb-4">Panel Admin</h4>
+          <nav class="nav flex-column">
+            <a href="#" class="nav-link active text-decoration-none">📊 Dashboard</a>
+            <a href="admin-edit.html" class="nav-link text-decoration-none">✏️ Editar Contenido</a>
+            <button class="btn btn-outline-danger w-100 mt-5" onclick="logout()">🚪 Cerrar Sesión</button>
+          </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 p-4">
+          <div class="row mb-4">
+            <div class="col-12">
+              <h1 class="text-brand">Bienvenido, Administrador</h1>
+              <p class="text-muted">Gestiona todos los aspectos del hotel desde aquí</p>
+            </div>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+              <div class="card stat-card">
+                <div class="card-body">
+                  <h6 class="text-muted">Reservas Totales</h6>
+                  <h3 class="text-brand">284</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card stat-card">
+                <div class="card-body">
+                  <h6 class="text-muted">Huéspedes Hoy</h6>
+                  <h3 class="text-brand">42</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card stat-card">
+                <div class="card-body">
+                  <h6 class="text-muted">Ingresos Mes</h6>
+                  <h3 class="text-brand">€28.5K</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card stat-card">
+                <div class="card-body">
+                  <h6 class="text-muted">Ocupación</h6>
+                  <h3 class="text-brand">87%</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header bg-brand text-white">
+                  <h5 class="mb-0">🔧 Acciones Rápidas</h5>
+                </div>
+                <div class="card-body">
+                  <div class="d-grid gap-2">
+                    <a href="admin-edit.html" class="btn btn-outline-brand">Editar Contenido del Sitio</a>
+                    <button class="btn btn-outline-brand" disabled>Crear Promoción Nueva</button>
+                    <button class="btn btn-outline-brand" disabled>Generar Reportes</button>
+                    <button class="btn btn-outline-brand" disabled>Gestionar Tarifas</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header bg-brand text-white">
+                  <h5 class="mb-0">📌 Información del Sistema</h5>
+                </div>
+                <div class="card-body">
+                  <table class="table table-sm table-borderless">
+                    <tr>
+                      <td class="text-muted">Versión:</td>
+                      <td class="fw-bold">1.0.0</td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">Último Backup:</td>
+                      <td class="fw-bold">Hoy 14:30</td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">Estado del Sistema:</td>
+                      <td><span class="badge bg-success">En Línea</span></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">Usuarios Activos:</td>
+                      <td class="fw-bold">12</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      // Verificar que sea admin
+      function checkAccess() {
+        const userRole = localStorage.getItem('userRole');
+        if (userRole !== 'admin') {
+          alert('Acceso denegado. Solo administradores pueden acceder.');
+          window.location.href = 'index.html';
+        }
+      }
+
+      // Cerrar sesión
+      function logout() {
+        localStorage.removeItem('userRole');
+        localStorage.removeItem('loginTime');
+        window.location.href = 'account.html';
+      }
+
+      checkAccess();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servicios - Tenorio Lodge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      :root{--brand:#2c7a5f}
+      .bg-brand{background-color:var(--brand)!important}
+      .text-brand{color:var(--brand)!important}
+      .btn-brand{background-color:var(--brand);border-color:var(--brand);color:white}
+      .btn-brand:hover{background-color:#245e48;border-color:#245e48;color:white}
+      .btn-outline-brand{color:var(--brand);border-color:var(--brand)}
+      .btn-outline-brand:hover{background-color:var(--brand);color:white}
+      .hero-bg{background:linear-gradient(135deg, var(--brand) 0%, #1e5a3f 100%);min-height:400px}
+      .service-card{box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:all 0.3s;border:none}
+      .service-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.15);transform:translateY(-5px)}
+      .service-img{width:100%;height:350px;object-fit:cover;border-radius:8px}
+      .amenity-icon{width:80px;height:80px;background-color:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:2rem}
+      .additional-service{background-color:#f0f8f5;border-radius:8px;padding:25px;transition:all 0.3s}
+      .additional-service:hover{background-color:#e0f3ed}
+      .feature-list li{margin-bottom:10px}
+      .feature-list li:before{content:"✓";color:var(--brand);font-weight:bold;margin-right:10px}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-brand" href="index.html">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2"><path d="M12 2C12 2 8 6 8 10C8 14 12 22 12 22C12 22 16 14 16 10C16 6 12 2 12 2Z" fill="var(--brand)"/></svg>
+          <span class="fs-5">Tenorio Lodge</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="activities.html">Actividades</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html">Información</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-brand text-white" href="booking.html">Reservar</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-outline-success" href="account.html">Mi Cuenta</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white d-flex align-items-center">
+      <div class="container text-center py-5">
+        <h1 class="display-4 mb-3">Nuestros Servicios</h1>
+        <p class="lead">Experiencias diseñadas para tu bienestar</p>
+      </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-brand mb-2">Servicios Principales</h2>
+        </div>
+
+        <!-- Service 1: Habitaciones -->
+        <div class="row g-4 align-items-center mb-5">
+          <div class="col-lg-6">
+            <img src="../img/Galeria7.jpg" alt="Habitaciones" class="service-img">
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="amenity-icon">🛏️</div>
+              <h3 class="text-brand mb-0" style="font-size:2rem">Habitaciones</h3>
+            </div>
+            <p class="text-muted mb-3">Suites y habitaciones diseñadas con materiales sostenibles y máximo confort</p>
+            <ul class="feature-list list-unstyled mb-4">
+              <li>Habitacion Estandar - 150€</li>
+              <li>Habitacion Doble - 200€</li>
+              <li>Habitacion Familiar - 250€</li>
+              <li>Habitacion Premium - 350€</li>
+            </ul>
+            <a href="booking.htm" class="btn btn-brand">Reservar Ahora</a>
+          </div>
+        </div>
+
+        <!-- Service 2: Restaurante -->
+        <div class="row g-4 align-items-center mb-5 flex-row-reverse">
+          <div class="col-lg-6">
+            <img src="../img/Galeria Previa4.jpg" alt="Restaurante" class="service-img">
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="amenity-icon">🍽️</div>
+              <h3 class="text-brand mb-0" style="font-size:2rem">Restaurante</h3>
+            </div>
+            <p class="text-muted mb-3">Gastronomía orgánica de la granja a la mesa con productos locales</p>
+            <ul class="feature-list list-unstyled mb-4">
+              <li>Desayuno 7:00 - 11:00</li>
+              <li>Almuerzo 13:00 - 16:00</li>
+              <li>Cena 19:00 - 23:00</li>
+              <li>Menú vegano disponible</li>
+            </ul>
+            <a href="restaurant.html" class="btn btn-brand">Más Información</a>
+          </div>
+        </div>
+
+        <!-- Service 3: Spa & Bienestar -->
+        <div class="row g-4 align-items-center mb-5">
+          <div class="col-lg-6">
+            <img src="../img/Galeria9.jpg" alt="Spa" class="service-img">
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="amenity-icon">✨</div>
+              <h3 class="text-brand mb-0" style="font-size:2rem">Spa & Bienestar</h3>
+            </div>
+            <p class="text-muted mb-3">Tratamientos holísticos con productos 100% naturales y orgánicos</p>
+            <ul class="feature-list list-unstyled mb-4">
+              <li>Masajes terapéuticos</li>
+              <li>Circuito termal</li>
+              <li>Yoga y meditación</li>
+              <li>Tratamientos faciales</li>
+            </ul>
+            <a href="spa.html" class="btn btn-brand">Reservar Spa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-brand mb-2">Comodidades Incluidas</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="text-center">
+              <div class="amenity-icon">📶</div>
+              <h5 class="text-brand">WiFi Gratis</h5>
+              <p class="small text-muted">Alta velocidad en todo el hotel</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="text-center">
+              <div class="amenity-icon">☕</div>
+              <h5 class="text-brand">Minibaro</h5>
+              <p class="small text-muted">Productos locales en habitaciones</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="text-center">
+              <div class="amenity-icon">💨</div>
+              <h5 class="text-brand">Climatización</h5>
+              <p class="small text-muted">Sistema sostenible y eficiente</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="text-center">
+              <div class="amenity-icon">🛎️</div>
+              <h5 class="text-brand">Servicio 24h</h5>
+              <p class="small text-muted">Atención personalizada disponible</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-brand mb-2">Servicios Adicionales</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="additional-service">
+              <h5 class="text-brand mb-2">🚗 Traslado al Aeropuerto</h5>
+              <p class="small text-muted mb-2">Servicio en vehículos eléctricos disponible 24/7</p>
+              <p class="text-brand fw-bold">45€ por trayecto</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="additional-service">
+              <h5 class="text-brand mb-2">🧺 Lavandería</h5>
+              <p class="small text-muted mb-2">Servicio de lavandería con productos biodegradables</p>
+              <p class="text-brand fw-bold">Desde 15€</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="additional-service">
+              <h5 class="text-brand mb-2">🚴 Ayuda en eleccion de tours</h5>
+              <p class="small text-muted mb-2">Tours en la zona</p>
+              <p class="text-brand fw-bold">Gratuito para huéspedes</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="additional-service">
+              <h5 class="text-brand mb-2">🐾 Cuidado de Mascotas</h5>
+              <p class="small text-muted mb-2">Servicio de cuidado y paseo de mascotas</p>
+              <p class="text-brand fw-bold">20€ por día</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="additional-service">
+              <h5 class="text-brand mb-2">🎉 Eventos Privados</h5>
+              <p class="small text-muted mb-2">Organización de eventos sostenibles y bodas</p>
+              <p class="text-brand fw-bold">Consultar presupuesto</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="additional-service">
+              <h5 class="text-brand mb-2">📦 Paquetes de Experiencias</h5>
+              <p class="small text-muted mb-2">Combinaciones especiales de actividades y tratamientos</p>
+              <p class="text-brand fw-bold">Desde 99€</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-brand text-white py-5">
+      <div class="container text-center">
+        <h2 class="mb-3">¿Listo para disfrutar?</h2>
+        <p class="lead mb-4">Reserva ahora y aprovecha nuestros servicios exclusivos</p>
+        <a href="booking.html" class="btn btn-light btn-lg">Hacer una Reserva</a>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Ubicación</h6>
+            <p class="small">Reserva Natural El Tenorio<br>Guanacaste, Costa Rica<br>Código Postal: 50801</p>
+          </div>
+          <div class="col-md-4">
+            <h6>Contacto</h6>
+            <p class="small">Teléfono: +506 2466-8282<br>WhatsApp: +506 8888-9999</p>
+          </div>
+          <div class="col-md-4">
+            <h6>Email</h6>
+            <p class="small">reservas@tenoriolodge.com<br>info@tenoriolodge.com</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">© 2025 Tenorio Lodge. Todos los derechos reservados.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

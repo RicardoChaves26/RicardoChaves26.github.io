@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar Contenido - Tenorio Lodge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      :root{--brand:#2c7a5f}
+      .bg-brand{background-color:var(--brand)!important}
+      .text-brand{color:var(--brand)!important}
+      .btn-brand{background-color:var(--brand);border-color:var(--brand);color:white}
+      .btn-brand:hover{background-color:#245e48;border-color:#245e48}
+      .sidebar{background-color:#f8f9fa;min-height:100vh;padding:20px}
+      .nav-link{color:#333;padding:10px 15px;margin-bottom:5px;border-radius:5px}
+      .nav-link:hover{background-color:#e9ecef}
+      .nav-link.active{background-color:var(--brand);color:white}
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+          <h4 class="text-brand mb-4">Panel Admin</h4>
+          <nav class="nav flex-column">
+            <a href="admin-dashboard.html" class="nav-link text-decoration-none">📊 Dashboard</a>
+            <a href="#" class="nav-link active text-decoration-none">✏️ Editar Contenido</a>
+            <button class="btn btn-outline-danger w-100 mt-5" onclick="logout()">🚪 Cerrar Sesión</button>
+          </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 p-4">
+          <div class="row mb-4">
+            <div class="col-12">
+              <h1 class="text-brand">Editar Contenido del Sitio</h1>
+              <p class="text-muted">Actualiza la información que ven los huéspedes</p>
+            </div>
+          </div>
+
+          <!-- Tabs for different content sections -->
+          <ul class="nav nav-tabs mb-4" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#homeContent" type="button">
+                🏠 Página Principal
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#servicesContent" type="button">
+                🌿 Servicios
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="rooms-tab" data-bs-toggle="tab" data-bs-target="#roomsContent" type="button">
+                🛏️ Habitaciones
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#aboutContent" type="button">
+                ℹ️ Acerca de Nosotros
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- Home Content -->
+            <div class="tab-pane fade show active" id="homeContent">
+              <div class="card">
+                <div class="card-header bg-brand text-white">
+                  <h5 class="mb-0">Contenido de Página Principal</h5>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Título Principal</label>
+                      <input type="text" class="form-control" value="Bienvenido a Tenorio Lodge">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Subtítulo</label>
+                      <input type="text" class="form-control" value="Tu refugio verde en la naturaleza de Costa Rica">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Descripción Principal</label>
+                      <textarea class="form-control" rows="5">Sumérjase en la belleza natural de la Reserva Natural El Tenorio, donde la naturaleza y el confort se encuentran. Nuestro alojamiento eco-amigable ofrece una experiencia única rodeado de bosques vírgenes, ríos cristalinos y una abundante vida silvestre.</textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Imagen Hero (URL)</label>
+                      <input type="url" class="form-control" value="https://images.unsplash.com/photo-1549887534-0c3e8a8b4d4e?w=1200">
+                    </div>
+                    <button type="submit" class="btn btn-brand">💾 Guardar Cambios</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Content -->
+            <div class="tab-pane fade" id="servicesContent">
+              <div class="card">
+                <div class="card-header bg-brand text-white">
+                  <h5 class="mb-0">Servicios Disponibles</h5>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Servicio 1: Spa</label>
+                      <input type="text" class="form-control" value="Relajación total con tratamientos naturales">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Precio Spa</label>
+                      <input type="number" class="form-control" value="145" step="0.01">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Servicio 2: Restaurante</label>
+                      <input type="text" class="form-control" value="Comida sostenible con ingredientes locales">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Servicio 3: Actividades</label>
+                      <input type="text" class="form-control" value="Caminatas, observación de fauna, kayaking">
+                    </div>
+                    <button type="submit" class="btn btn-brand">💾 Guardar Servicios</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rooms Content -->
+            <div class="tab-pane fade" id="roomsContent">
+              <div class="card">
+                <div class="card-header bg-brand text-white">
+                  <h5 class="mb-0">Tipos de Habitaciones</h5>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-4 p-3 border rounded">
+                      <h6>Habitación Estándar</h6>
+                      <div class="row">
+                        <div class="col-md-6 mb-2">
+                          <label class="form-label">Precio por noche (€)</label>
+                          <input type="number" class="form-control" value="100">
+                        </div>
+                        <div class="col-md-6 mb-2">
+                          <label class="form-label">Capacidad</label>
+                          <input type="text" class="form-control" value="2 huéspedes">
+                        </div>
+                      </div>
+                      <div class="mb-2">
+                        <label class="form-label">Descripción</label>
+                        <textarea class="form-control" rows="2">Habitación acogedora con vistas al bosque, baño privado y comodidades básicas</textarea>
+                      </div>
+                    </div>
+
+                    <div class="mb-4 p-3 border rounded">
+                      <h6>Suite Panorámica</h6>
+                      <div class="row">
+                        <div class="col-md-6 mb-2">
+                          <label class="form-label">Precio por noche (€)</label>
+                          <input type="number" class="form-control" value="200">
+                        </div>
+                        <div class="col-md-6 mb-2">
+                          <label class="form-label">Capacidad</label>
+                          <input type="text" class="form-control" value="2-3 huéspedes">
+                        </div>
+                      </div>
+                      <div class="mb-2">
+                        <label class="form-label">Descripción</label>
+                        <textarea class="form-control" rows="2">Suite de lujo con vistas panorámicas, balcón privado, jacuzzi y amenities premium</textarea>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-brand">💾 Guardar Habitaciones</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="tab-pane fade" id="aboutContent">
+              <div class="card">
+                <div class="card-header bg-brand text-white">
+                  <h5 class="mb-0">Información General</h5>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Nombre del Hotel</label>
+                      <input type="text" class="form-control" value="Tenorio Lodge">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Ubicación</label>
+                      <input type="text" class="form-control" value="Reserva Natural El Tenorio, Guanacaste, Costa Rica">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Teléfono de Contacto</label>
+                      <input type="tel" class="form-control" value="+506 2466-8282">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Email Principal</label>
+                      <input type="email" class="form-control" value="reservas@tenoriolodge.com">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Descripción "Acerca de Nosotros"</label>
+                      <textarea class="form-control" rows="5">En Tenorio Lodge, creemos en la responsabilidad ambiental. Nuestro compromiso con la sostenibilidad es el corazón de todo lo que hacemos, desde nuestras prácticas de conservación hasta la experiencia que ofrecemos a nuestros huéspedes.</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-brand">💾 Guardar Información</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      // Verificar que sea admin
+      function checkAccess() {
+        const userRole = localStorage.getItem('userRole');
+        if (userRole !== 'admin') {
+          alert('Acceso denegado. Solo administradores pueden acceder.');
+          window.location.href = 'index.html';
+        }
+      }
+
+      // Cerrar sesión
+      function logout() {
+        localStorage.removeItem('userRole');
+        localStorage.removeItem('loginTime');
+        window.location.href = 'account.html';
+      }
+
+      checkAccess();
+    </script>
+  </body>
+</html>

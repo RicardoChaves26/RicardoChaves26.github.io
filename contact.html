@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto - Tenorio Lodge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      :root{--brand:#2c7a5f}
+      .bg-brand{background-color:var(--brand)!important}
+      .text-brand{color:var(--brand)!important}
+      .btn-brand{background-color:var(--brand);border-color:var(--brand)}
+      .btn-brand:hover{background-color:#245e48;border-color:#245e48}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-brand" href="index.html">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2"><path d="M12 2C12 2 8 6 8 10C8 14 12 22 12 22C12 22 16 14 16 10C16 6 12 2 12 2Z" fill="var(--brand)"/></svg>
+          <span class="fs-5">Tenorio Lodge</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="activities.html">Actividades</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html">Información</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contacto</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-brand text-white" href="booking.html">Reservar</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-outline-success" href="account.html">Mi Cuenta</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5 bg-light text-center">
+      <div class="container">
+        <h1 class="display-5 text-brand">Contacto</h1>
+        <p class="lead text-muted">Escríbenos y te responderemos a la brevedad.</p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row gy-4">
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h4 class="card-title">Envíanos un Mensaje</h4>
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input class="form-control" placeholder="Tu nombre">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Apellido</label>
+                    <input class="form-control" placeholder="Tu apellido">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="tu@email.com"></div>
+                  <div class="col-md-6 mb-3"><label class="form-label">Teléfono</label><input class="form-control" placeholder="+34 123 456 789"></div>
+                </div>
+                <div class="mb-3"><label class="form-label">Asunto</label><input class="form-control" placeholder="¿En qué podemos ayudarte?"></div>
+                <div class="mb-3"><label class="form-label">Mensaje</label><textarea class="form-control" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea></div>
+                <button class="btn btn-brand text-white">Enviar Mensaje</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body">
+              <h5>Información de Contacto</h5>
+              <p class="mb-1"><strong>Dirección:</strong><br>Bijagua Upala<br>Tenorio Lodge</p>
+              <p class="mb-1"><strong>Teléfono:</strong><br>Recepción: +506 2504 0040<br>Reservas: +506 2504 0041</p>
+              <p class="mb-1"><strong>Email:</strong><br>reservas@tenoriolodge.com<br>info@tenoriolodge.com</p>
+              <p class="mb-0"><strong>Horario:</strong><br>Atención 24 horas</p>
+              <a href="#" class="btn btn-outline-success mt-3">Llamar Ahora</a>
+            </div>
+          </div>
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h6>¿Necesitas ayuda inmediata?</h6>
+              <p class="small text-muted">Nuestro equipo está disponible 24/7 para atender emergencias o consultas urgentes.</p>
+              <a class="btn btn-brand text-white" href="#">Whatsapp / Llamar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-5">
+        <h4 class="text-center mb-4">Mapa y Localización</h4>
+        <div class="ratio ratio-16x9 mb-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.5!2d-85.07169!3d10.71237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa28d8d8d8d8d8d%3A0x0!2zMTDCsDQyJzQ1LjAiTiA4NcKwMDQnMTguMCJX!5e0!3m2!1ses!2scr!4v1700959200000" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="row text-center mt-3">
+          <div class="col-md-4"><div class="p-3 bg-light rounded">Desde el Aeropuerto<br>45 minutos en coche</div></div>
+          <div class="col-md-4"><div class="p-3 bg-light rounded">Transporte Público<br>Línea 5 hasta "Hotel Verde"</div></div>
+          <div class="col-md-4"><div class="p-3 bg-light rounded">Parking<br>Gratuito para huéspedes</div></div>
+        </div>
+      </section>
+
+      <section class="mt-5">
+        <h4 class="text-center mb-3">Preguntas Frecuentes</h4>
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">¿Cuál es el horario de check in y check out?</button></h2>
+            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Check in: 15:00 | Check out: 12:00.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">¿Aceptan mascotas?</button></h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí, en habitaciones seleccionadas con cargo adicional.</div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Ubicación</h6>
+            <p class="small">Reserva Natural El Tenorio<br>Guanacaste, Costa Rica<br>Código Postal: 50801</p>
+            <a href="#" class="text-white small">Ver mapa de ubicación →</a>
+          </div>
+          <div class="col-md-4">
+            <h6>Contacto</h6>
+            <p class="small">Teléfono: +506 2466-8282<br>WhatsApp: +506 8888-9999</p>
+          </div>
+          <div class="col-md-4">
+            <h6>Email</h6>
+            <p class="small">reservas@tenoriolodge.com<br>info@tenoriolodge.com</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">© 2025 Tenorio Lodge. Todos los derechos reservados.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

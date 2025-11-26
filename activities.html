@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actividades - Tenorio Lodge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      :root{--brand:#2c7a5a}
+      .bg-brand{background-color:var(--brand)!important}
+      .text-brand{color:var(--brand)!important}
+      .btn-brand{background-color:var(--brand);border-color:var(--brand);color:#fff}
+      .activity-img{width:100%;height:220px;object-fit:cover;border-radius:.5rem}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-brand" href="index.html">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2"><path d="M12 2C12 2 8 6 8 10C8 14 12 22 12 22C12 22 16 14 16 10C16 6 12 2 12 2Z" fill="var(--brand)"/></svg>
+          <span class="fs-5">Tenorio Lodge</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="activities.html">Actividades</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html">Información</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-brand" href="booking.html">Reservar</a></li>
+            <li class="nav-item ms-2"><a class="btn btn-outline-success" href="account.html">Mi Cuenta</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5 bg-brand text-white text-center">
+      <div class="container">
+        <h1 class="display-5">Actividades</h1>
+        <p class="lead">Experiencias únicas en contacto con la naturaleza</p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div class="row g-4" id="activitiesGrid">
+        <!-- Cards populated inline to match src content -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="../img/Tubing.jpg" class="activity-img" alt="Senderismo" data-duration="2-4 horas" data-difficulty="Fácil a Media" data-schedule="Diario 9:00 y 16:00" data-description="Explora rutas naturales con guías expertos" data-title="Senderismo Guiado">
+            <div class="card-body">
+              <h6 class="text-brand">Tubing en Rio Celeste</h6>
+              <p class="text-muted small mb-0">Explora el rio en la mejor experiencia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="../img/Rio Celeste.jpg" class="activity-img" alt="Ciclismo" data-duration="3 horas" data-difficulty="Media" data-schedule="Mar, Jue, Sáb 10:00" data-description="Recorre senderos ecológicos en bicicleta" data-title="Ciclismo de Montaña">
+            <div class="card-body">
+              <h6 class="text-brand">Senderismo en el Parque Volcan Tenorio</h6>
+              <p class="text-muted small mb-0">Recorre los senderos del parque Volcan Tenorio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="../img/Tour Cacao.webp" class="activity-img" alt="Observación de aves" data-duration="2 horas" data-difficulty="Fácil" data-schedule="Lun, Mié, Vie 7:00" data-description="Descubre la fauna local con ornitólogos" data-title="Observación de Aves">
+            <div class="card-body">
+              <h6 class="text-brand">Tour Cacao</h6>
+              <p class="text-muted small mb-0">Aprende como se procesa el cacaco</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="../img/Laberinto.webp" class="activity-img" alt="Yoga" data-duration="1.5 horas" data-difficulty="Todos los niveles" data-schedule="Diario 7:30 y 18:00" data-description="Sesiones de yoga al aire libre" data-title="Yoga en la Naturaleza">
+            <div class="card-body">
+              <h6 class="text-brand">Laberinto Katira</h6>
+              <p class="text-muted small mb-0">Disfruta de uno de los mejores laberintos del pais</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="../img/Perezoso.jpg" class="activity-img" alt="Kayak" data-duration="2 horas" data-difficulty="Fácil a Media" data-schedule="Mié, Sáb, Dom 11:00" data-description="Navega por el río en kayaks sostenibles" data-title="Kayak Ecológico">
+            <div class="card-body">
+              <h6 class="text-brand">Tour en el habitat del Perezoso</h6>
+              <p class="text-muted small mb-0">Conoce los animales de nuestra zona</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="../img/Tapir.webp" class="activity-img" alt="Escalada" data-duration="4 horas" data-difficulty="Media a Alta" data-schedule="Vie, Sáb, Dom 9:00" data-description="Rutas de escalada con equipo certificado" data-title="Escalada">
+            <div class="card-body">
+              <h6 class="text-brand">Tour nocturno del Tapir</h6>
+              <p class="text-muted small mb-0">Acompañanos a buscar el tapir juntos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal to show activity details -->
+      <div class="modal fade" id="activityModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <img id="activityImg" src="" class="img-fluid w-100" alt="Actividad">
+            </div>
+            <div class="modal-footer d-flex justify-content-between align-items-start">
+              <div>
+                <h5 id="activityTitle"></h5>
+                <p id="activityDesc" class="mb-1 text-muted"></p>
+                <p class="small text-muted mb-0"><strong>Duración:</strong> <span id="activityDuration"></span></p>
+                <p class="small text-muted mb-0"><strong>Dificultad:</strong> <span id="activityDifficulty"></span></p>
+                <p class="small text-muted"><strong>Horario:</strong> <span id="activitySchedule"></span></p>
+              </div>
+              <div><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Ubicación</h6>
+            <p class="small">Reserva Natural El Tenorio<br>Guanacaste, Costa Rica<br>Código Postal: 50801</p>
+            <a href="contact.html" class="text-white small">Ver mapa de ubicación →</a>
+          </div>
+          <div class="col-md-4">
+            <h6>Contacto</h6>
+            <p class="small">Teléfono: +506 2466-8282<br>WhatsApp: +506 8888-9999</p>
+          </div>
+          <div class="col-md-4">
+            <h6>Email</h6>
+            <p class="small">reservas@tenoriolodge.com<br>info@tenoriolodge.com</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">© 2025 Tenorio Lodge. Todos los derechos reservados.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      document.querySelectorAll('.activity-img').forEach(function(img){
+        img.addEventListener('click', function(){
+          var modal = new bootstrap.Modal(document.getElementById('activityModal'));
+          document.getElementById('activityImg').src = this.src;
+          document.getElementById('activityTitle').textContent = this.dataset.title || '';
+          document.getElementById('activityDesc').textContent = this.dataset.description || '';
+          document.getElementById('activityDuration').textContent = this.dataset.duration || '';
+          document.getElementById('activityDifficulty').textContent = this.dataset.difficulty || '';
+          document.getElementById('activitySchedule').textContent = this.dataset.schedule || '';
+          modal.show();
+        });
+      });
+    </script>
+  </body>
+</html>
